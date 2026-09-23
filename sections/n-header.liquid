@@ -62,6 +62,19 @@
 </div>
 {% endif %}
 
+<script>
+    var toggle = document.querySelector(".menu-toggle");
+    var topNav = document.querySelector(".mobile-menu");
+
+
+    // Listen for click event on toggle var
+    toggle.addEventListener('click', function() {
+    console.log("toggle clicked");
+    // toggle class "active" on topNav var
+    topNav.classList.toggle("open");
+    }, false);
+</script>
+
 {% schema %}
 {
   "name": "N Header",
