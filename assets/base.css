@@ -3704,3 +3704,14 @@ details-disclosure > details {
 .btn-yellow:after{
   background: #000000;
 }
+
+.btn-black{
+  background: #000000;
+  color: #fff;
+}
+.btn-black:hover{
+  color: #000000;
+}
+.btn-black:after{
+  background: #FFF544;
+}

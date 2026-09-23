@@ -1,0 +1,38 @@
+.n-image-banner-wrap{
+    position: relative;
+}
+.n-image-wrap img{
+    width: 100%;
+    vertical-align: top;
+}
+.n-image-content{
+    width: 100%;
+    max-width: 640px;
+    padding: 50px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.n-image-content h1{
+    font-size: 70px;
+    color: #000;
+    font-weight: 500;
+    letter-spacing: normal;
+    line-height: 1;
+    margin: 0;
+}
+.n-image-content .rte{
+    font-size: 20px;
+    color: #000000;
+    line-height: 1.4;
+}
+.n-image-bottom-text{
+    background: #F5F5F5;
+    padding: 9px 50px;
+    color: #000000;
+    text-align: center;
+    line-height: 1;
+}
+.n-image-content>*+*{
+    margin-block-start: 50px;
+}
