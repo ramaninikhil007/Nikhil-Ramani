@@ -3635,3 +3635,20 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
+@font-face {
+    font-family: 'Jost';
+    src: url('https://cdn.shopify.com/s/files/1/0811/4683/9076/files/Jost-Light.woff2') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0811/4683/9076/files/Jost-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lustria';
+    src: url('https://cdn.shopify.com/s/files/1/0811/4683/9076/files/Lustria-Regular.woff2') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0811/4683/9076/files/Lustria-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
