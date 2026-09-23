@@ -1,0 +1,20 @@
+.n-header{
+    background: #F5F5F5;
+    padding: 10px 50px;
+}
+.n-header header{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+.header__logo{
+    margin: 0;
+    justify-self: start;
+}
+.header__info-text{
+    font-size: 16px;
+    color: #000000;
+}
+.n-header .btn{
+    justify-self: end;
+}
