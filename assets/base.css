@@ -3696,6 +3696,9 @@ details-disclosure > details {
   background: #FFF544;
   color: #000000;
 }
+.btn-yellow:hover{
+  color: #fff;
+}
 .btn-yellow:after{
   background: #000000;
 }
