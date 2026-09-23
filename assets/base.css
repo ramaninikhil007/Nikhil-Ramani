@@ -3653,6 +3653,9 @@ details-disclosure > details {
     font-display: swap;
 }
 
+.container{
+  padding-inline: 50px;
+}
 .btn{
   display: inline-flex;
   font-size: 16px;
@@ -3716,6 +3719,9 @@ details-disclosure > details {
   background: #FFF544;
 }
 @media screen and (max-width:989px){
+  .container{
+    padding-inline: 16px;
+  }
   .btn {
     padding: 11px 30px;
   }

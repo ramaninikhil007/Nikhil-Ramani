@@ -1,5 +1,39 @@
 {{ 'n-products.css' | asset_url | stylesheet_tag }}
 
+<div class="container">
+    {%- if section.settings.title != blank -%}
+      <h2 class="n-title">
+        {{ section.settings.title }}
+      </h2>
+    {%- endif -%}
+    <div class="product-list">
+      <div class="grid grid--2-col grid--3-col-desktop">
+        {%- for block in section.blocks -%}
+        {%- liquid
+          assign product = block.settings.product
+        -%}
+        <div class="grid__item">
+          <div class="product_item">
+            <div class="product_image">
+              {{
+                product.image
+                | image_url: width: 3840
+                | image_tag: height: height, sizes: '100vw', widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+              }}
+            </div>
+            <div class="product_quickview" style="top:{{ block.settings.icon_top }}%;left:{{ block.settings.icon_left }}%;">
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.98047 0.75V9.21154" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+                <path d="M0.75 4.98071H9.21154" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        {%- endfor -%}
+      </div>
+    </div>
+</div>
+
 {% schema %}
 {
   "name": "N products",
@@ -8,7 +42,45 @@
     "groups": ["header", "footer"]
   },
   "settings": [
-    
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Tisso vison in the wild"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        },
+        {
+          "type": "range",
+          "id": "icon_top",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Plus icon top position",
+          "default": 50
+        }, 
+        {
+          "type": "range",
+          "id": "icon_left",
+          "min": 1,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Plus icon left position",
+          "default": 50
+        }
+      ]
+    }
   ],
   "presets": [
     {
