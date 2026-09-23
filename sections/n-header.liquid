@@ -1,12 +1,98 @@
 {{ 'n-header.css' | asset_url | stylesheet_tag }}
 
+<header>
+    {% if section.settings.text != blank or section.settings.button_label != blank %}
+    <button class="menu-toggle" type="button">
+        <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 6H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1 1H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1 11H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+    {% endif %}
+    {%- if section.settings.logo_position != 'middle-center' -%}
+      {%- if request.page_type == 'index' -%}
+        <h1 class="header__logo">
+      {%- endif -%}
+      <a href="{{ routes.root_url }}" class="header__logo">
+        {%- if settings.logo != blank -%}
+          <div class="header__logo-wrapper">
+            {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+            {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
+            {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
+            {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
+            {{
+              settings.logo
+              | image_url: width: 600
+              | image_tag:
+                widths: widths,
+                height: logo_height,
+                width: settings.logo_width,
+                alt: logo_alt,
+                sizes: sizes,
+                preload: true
+            }}
+          </div>
+        {%- else -%}
+          <span class="h2">{{ shop.name }}</span>
+        {%- endif -%}
+      </a>
+      {%- if request.page_type == 'index' -%}
+        </h1>
+      {%- endif -%}
+    {%- endif -%}
+    <div class="header__info-text>{{ section.settings.text }}</div>
+    <a href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+</header>
+
+{% if section.settings.text != blank or section.settings.button_label != blank %}
+<div id="mobile_menu" class="mobile-menu">
+    <div class="mobile-menu-inner">
+        {% if section.settings.text != blank %}
+        <div class="header__info-text>{{ section.settings.text }}</div>
+        {% endif %}
+        {% if section.settings.button_label != blank %}
+        <a href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+        {% endif %}
+    </div>
+</div>
+{% endif %}
+
 {% schema %}
 {
   "name": "N Header",
   "class": "n-header",
-  "max_blocks": 3,
   "settings": [
-    
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Logo"
+    },
+    {
+        "type": "range",
+        "id": "logo_width",
+        "min": 50,
+        "max": 300,
+        "step": 10,
+        "default": 100,
+        "unit": "px",
+        "label": "Logo width"
+      },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    }
   ]
 }
 {% endschema %}
