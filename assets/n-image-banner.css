@@ -36,3 +36,24 @@
 .n-image-content>*+*{
     margin-block-start: 50px;
 }
+
+@media screen and (max-width:1399px){
+    .n-image-content>*+*{
+        margin-block-start: 30px;
+    }
+}
+@media screen and (max-width:1199px){
+    .n-image-content>*+*{
+        margin-block-start: 25px;
+    }
+    .n-image-content {
+        max-width: 500px;
+        padding: 30px;
+    }
+    .n-image-content h1{
+        font-size: 50px;
+    }
+    .n-image-content .rte {
+        font-size: 18px;
+    }
+}

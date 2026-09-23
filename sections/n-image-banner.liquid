@@ -23,12 +23,12 @@
           {{
             section.settings.image
             | image_url: width: 3840
-            | image_tag: height: height, sizes: '100vw', widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840', fetchpriority: 'high', class: 'small-hide'
+            | image_tag: height: height, sizes: '100vw', widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840', fetchpriority: 'high', class: 'small-hide medium-hide'
           }}
           {{
             section.settings.image_m
             | image_url: width: 3840
-            | image_tag: height: height, sizes: '100vw', widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840', fetchpriority: 'high', class: 'medium-hide large-up-hide'
+            | image_tag: height: height, sizes: '100vw', widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840', fetchpriority: 'high', class: 'large-up-hide'
           }}
         {%- else -%}
           {{
@@ -45,8 +45,8 @@
   {% if section.settings.bottom_text != blank %}
   <div class="n-image-bottom-text">
     {% if section.settings.bottom_text_m != blank %}
-      <div class="small-hide">{{ section.settings.bottom_text }}</div>
-      <div class="medium-hide large-up-hide">{{ section.settings.bottom_text_m }}</div>
+      <div class="medium-hide small-hide">{{ section.settings.bottom_text }}</div>
+      <div class="large-up-hide">{{ section.settings.bottom_text_m }}</div>
     {% else %}
       {{ section.settings.bottom_text }}
     {% endif %}
