@@ -22,4 +22,6 @@
 }
 .n-header .btn{
     justify-self: end;
+    padding-inline-start: 44px;
+    line-height: 1;
 }

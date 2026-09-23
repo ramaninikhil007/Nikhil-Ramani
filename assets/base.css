@@ -3652,3 +3652,50 @@ details-disclosure > details {
     font-style: normal;
     font-display: swap;
 }
+
+.btn{
+  font-size: 16px;
+  font-weight: 400;
+  padding: 14px 55px;
+  border: none;
+  border-radius: 0px;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.4;
+}
+.btn:after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+  transform: translateX(-100%);
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: 1;
+}
+.btn:hover:after{
+  transform: translateX(0);
+}
+.btn-with-arrow{
+  padding-inline-end: 25px;
+}
+.btn-with-arrow span{
+  display: inline-flex;
+  align-items: center;
+  gap: 25px;
+  position: relative;
+  z-index: 2;
+}
+.btn-yellow{
+  background: #FFF544;
+  color: #000000;
+}
+.btn-yellow:after{
+  background: #000000;
+}
