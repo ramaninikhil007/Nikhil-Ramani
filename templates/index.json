@@ -13,7 +13,7 @@
       "type": "n-image-banner",
       "name": "N image banner",
       "settings": {
-        "image": "shopify://shop_images/Desktop_Banner.jpg",
+        "image": "shopify://shop_images/Desktop_Banner-SVG.svg",
         "image_m": "shopify://shop_images/Mobile_Banner.jpg",
         "title": "The Gift Guide",
         "text": "<p>Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.</p>",
