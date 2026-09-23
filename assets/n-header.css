@@ -1,11 +1,9 @@
-.n-header{
-    background: #F5F5F5;
-    padding: 10px 50px;
-}
 .n-header header{
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
+    background: #F5F5F5;
+    padding: 10px 50px;
 }
 .header__logo{
     margin: 0;
@@ -24,4 +22,30 @@
     justify-self: end;
     padding-inline-start: 44px;
     line-height: 1;
+}
+
+@media screen and (max-width:989px){
+    .n-header header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 16px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    }
+    .mobile-menu{
+        display: grid;
+        grid-template-columns: 0fr;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        background: #F2F2F2;
+        transition: grid-template-row .25s ease;
+    }
+    .mobile-menu.open{
+        grid-template-columns: 1fr;
+    }
+    .mobile-menu-inner{
+        padding: 25px;
+        text-align: center;
+    }
 }
