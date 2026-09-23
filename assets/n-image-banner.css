@@ -57,3 +57,21 @@
         font-size: 18px;
     }
 }
+@media screen and (max-width:989px){
+    .n-image-content {
+        max-width: 100%;
+        padding: 50px 50px 20px;
+        text-align: center;
+        position: static;
+    }
+    .n-image-content .btn{
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+    }
+    .n-image-bottom-text{
+        padding-inline: 16px;
+    }
+}

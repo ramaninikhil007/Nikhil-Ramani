@@ -3715,3 +3715,8 @@ details-disclosure > details {
 .btn-black:after{
   background: #FFF544;
 }
+@media screen and (max-width:989px){
+  .btn {
+    padding: 11px 30px;
+  }
+}

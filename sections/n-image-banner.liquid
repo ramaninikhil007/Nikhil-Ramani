@@ -8,7 +8,12 @@
       <h1>{{ section.settings.title }}</h1>
       {% endif %}
       {% if section.settings.text != blank %}
-      <div class="rte">{{ section.settings.text }}</div>
+        {% if section.settings.text_m != blank %}
+          <div class="rte medium-hide small-hide">{{ section.settings.text }}</div>
+          <div class="rte large-up-hide">{{ section.settings.text_m }}</div>
+        {% else %}
+          <div class="rte">{{ section.settings.text }}</div>
+        {% endif %}
       {% endif %}
       {% if section.settings.button_label != blank %}
       <a class="btn btn-black btn-with-arrow" href="{{ section.settings.button_link }}">
@@ -81,6 +86,12 @@
       "type": "richtext",
       "id": "text",
       "label": "Text"
+    },
+    {
+      "type": "richtext",
+      "id": "text_m",
+      "label": "Mobile text",
+      "info": "Optional"
     },
     {
       "type": "text",
