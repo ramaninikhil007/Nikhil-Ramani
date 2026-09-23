@@ -139,6 +139,15 @@
         "settings": {
           "color_scheme": "scheme-1"
         }
+      },
+      "n-header": {
+        "type": "n-header",
+        "settings": {
+          "logo_width": 100,
+          "text": "Find the ideal gift for your loved ones.",
+          "button_label": "choose gift",
+          "button_link": "#"
+        }
       }
     },
     "content_for_index": [],
