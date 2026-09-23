@@ -33,16 +33,15 @@
         box-shadow: 0 2px 5px rgba(0,0,0,0.15);
     }
     .mobile-menu{
-        display: grid;
-        grid-template-columns: 0fr;
+        height: 0;
         position: relative;
         z-index: 1;
         overflow: hidden;
         background: #F2F2F2;
-        transition: grid-template-row .25s ease;
+        transition: all .25s ease;
     }
     .mobile-menu.open{
-        grid-template-columns: 1fr;
+        height: auto;
     }
     .mobile-menu-inner{
         padding: 25px;
