@@ -18,8 +18,8 @@
     </div>
     {% endif %}
     <div class="n-image-wrap">
-      {%- if block.settings.image -%}
-        {%- if block.settings.image_m != blank -%}
+      {%- if section.settings.image -%}
+        {%- if section.settings.image_m != blank -%}
           {{
             section.settings.image
             | image_url: width: 3840
