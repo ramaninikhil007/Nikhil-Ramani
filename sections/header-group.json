@@ -54,10 +54,17 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "n-header": {
+      "type": "n-header",
+      "settings": {
+        
+      }
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "n-header"
   ]
 }
