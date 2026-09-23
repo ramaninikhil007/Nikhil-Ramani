@@ -10,6 +10,11 @@
 .header__logo{
     margin: 0;
     justify-self: start;
+    display: inline-flex;
+}
+.header__logo-wrapper{
+    display: inline-flex;
+    align-items: center;
 }
 .header__info-text{
     font-size: 16px;
