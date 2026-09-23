@@ -17,6 +17,7 @@
 .header__info-text{
     font-size: 16px;
     color: #000000;
+    line-height: 1;
 }
 .n-header .btn{
     justify-self: end;
