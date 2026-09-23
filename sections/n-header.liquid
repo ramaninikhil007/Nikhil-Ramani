@@ -2,7 +2,7 @@
 
 <header>
     {% if section.settings.text != blank or section.settings.button_label != blank %}
-    <button class="menu-toggle" type="button">
+    <button class="menu-toggle large-up-hide" type="button">
         <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 6H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M1 1H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -41,18 +41,18 @@
         </h1>
       {%- endif -%}
     {%- endif -%}
-    <div class="header__info-text">{{ section.settings.text }}</div>
-    <a href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+    <div class="header__info-text medium-hide small-hide">{{ section.settings.text }}</div>
+    <a href="{{ section.settings.button_link }}" class="btn btn-yellow btn-with-arrow medium-hide small-hide">{{ section.settings.button_label }}</a>
 </header>
 
 {% if section.settings.text != blank or section.settings.button_label != blank %}
-<div id="mobile_menu" class="mobile-menu">
+<div id="mobile_menu" class="mobile-menu large-up-hide">
     <div class="mobile-menu-inner">
         {% if section.settings.text != blank %}
         <div class="header__info-text">{{ section.settings.text }}</div>
         {% endif %}
         {% if section.settings.button_label != blank %}
-        <a href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>
+        <a href="{{ section.settings.button_link }}" class="btn btn-yellow btn-with-arrow">{{ section.settings.button_label }}</a>
         {% endif %}
     </div>
 </div>
