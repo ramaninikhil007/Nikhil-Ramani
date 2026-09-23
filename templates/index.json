@@ -26,8 +26,23 @@
     },
     "n_products_83jtLB": {
       "type": "n-products",
+      "blocks": {
+        "product_6teCfg": {
+          "type": "product",
+          "settings": {
+            "product": "black-leather-bag",
+            "icon_top": 50,
+            "icon_left": 50
+          }
+        }
+      },
+      "block_order": [
+        "product_6teCfg"
+      ],
       "name": "N products",
-      "settings": {}
+      "settings": {
+        "title": "Tisso vison in the wild"
+      }
     }
   },
   "order": [
