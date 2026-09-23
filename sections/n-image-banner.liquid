@@ -18,7 +18,7 @@
     </div>
     {% endif %}
     <div class="n-image-wrap">
-      {%- if section.settings.image -%}
+      {%- if section.settings.image != blank -%}
         {%- if section.settings.image_m != blank -%}
           {{
             section.settings.image
