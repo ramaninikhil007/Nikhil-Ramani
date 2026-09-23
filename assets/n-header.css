@@ -29,8 +29,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 10px 16px;
+        padding: 22px 16px;
         box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        position: relative;
+        z-index: 2;
     }
     .mobile-menu{
         height: 0;
@@ -46,5 +48,15 @@
     .mobile-menu-inner{
         padding: 25px;
         text-align: center;
+    }
+    .menu-toggle{
+        position: absolute;
+        left: 16px;
+        padding: 0;
+        border: none;
+        border-radius: 0px;
+    }
+    .menu-toggle.open .menu_icon, .menu-toggle:not(.open) .close_icon{
+        display: none;
     }
 }
