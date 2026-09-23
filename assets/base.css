@@ -3654,6 +3654,7 @@ details-disclosure > details {
 }
 
 .btn{
+  display: inline-flex;
   font-size: 16px;
   font-weight: 400;
   padding: 14px 55px;
@@ -3670,7 +3671,7 @@ details-disclosure > details {
 }
 .btn:after{
   content: '';
-  width: 100%;
+  width: 0%;
   height: 100%;
   transition: all 0.5s ease;
   transform: translateX(-100%);
@@ -3680,6 +3681,7 @@ details-disclosure > details {
   z-index: 1;
 }
 .btn:hover:after{
+  width: 100%;
   transform: translateX(0);
 }
 .btn-with-arrow{

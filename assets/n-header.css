@@ -59,4 +59,7 @@
     .menu-toggle.open .menu_icon, .menu-toggle:not(.open) .close_icon{
         display: none;
     }
+    .mobile-menu-inner .header__info-text+.btn{
+        margin-top: 16px;
+    }
 }
