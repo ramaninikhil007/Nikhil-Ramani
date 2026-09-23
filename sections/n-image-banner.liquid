@@ -1,14 +1,112 @@
 {{ 'n-image-banner.css' | asset_url | stylesheet_tag }}
 
+<div class="n-image-banner">
+  <div class="n-image-banner-wrap">
+    {% if section.settings.title != blank or section.settings.text != blank or section.settings.button_label != blank %}
+    <div class="n-image-content">
+      {% if section.settings.title != blank %}
+      <h1>{{ section.settings.title }}</h1>
+      {% endif %}
+      {% if section.settings.text != blank %}
+      <div class="rte">{{ section.settings.text }}</div>
+      {% endif %}
+      {% if section.settings.button_label != blank %}
+      <a href="{{ section.settings.button_link }}">
+        <span>{{ section.settings.button_label }}<svg width="27" height="12" viewBox="0 0 27 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.75 4.77295L7.83954e-08 4.77295L-7.83954e-08 6.27295L0.75 6.27295L0.75 4.77295ZM26.7876 6.05328C27.0805 5.76039 27.0805 5.28551 26.7876 4.99262L22.0146 0.21965C21.7217 -0.0732435 21.2468 -0.0732435 20.9539 0.21965C20.6611 0.512543 20.6611 0.987417 20.9539 1.28031L25.1966 5.52295L20.9539 9.76559C20.6611 10.0585 20.6611 10.5334 20.9539 10.8263C21.2468 11.1191 21.7217 11.1191 22.0146 10.8263L26.7876 6.05328ZM0.75 6.27295L26.2572 6.27295L26.2572 4.77295L0.75 4.77295L0.75 6.27295Z" fill="currentColor"/></svg></span>
+      </a>
+      {% endif %}
+    </div>
+    {% endif %}
+    <div class="n-image-wrap">
+      {%- if block.settings.image -%}
+        {%- if block.settings.image_m != blank -%}
+          {{
+            section.settings.image
+            | image_url: width: 3840
+            | image_tag: height: height, sizes: '100vw', widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840', fetchpriority: 'high', class: 'small-hide'
+          }}
+          {{
+            section.settings.image_m
+            | image_url: width: 3840
+            | image_tag: height: height, sizes: '100vw', widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840', fetchpriority: 'high', class: 'medium-hide large-up-hide'
+          }}
+        {%- else -%}
+          {{
+            section.settings.image
+            | image_url: width: 3840
+            | image_tag: height: height, sizes: '100vw', widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840', fetchpriority: 'high'
+          }}
+        {%- endif -%}
+      {%- else -%}
+          {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+    </div>
+  </div>
+  {% if section.settings.bottom_text != blank %}
+  <div class="n-image-bottom-text">
+    {% if section.settings.bottom_text_m != blank %}
+      <div class="small-hide">{{ section.settings.bottom_text }}</div>
+      <div class="medium-hide large-up-hide">{{ section.settings.bottom_text_m }}</div>
+    {% else %}
+      {{ section.settings.bottom_text }}
+    {% endif %}
+  </div>
+  {% endif %}
+</div>
+
 {% schema %}
 {
   "name": "N image banner",
-  "class": "n-image-banner",
   "disabled_on": {
     "groups": ["header", "footer"]
   },
   "settings": [
-    
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_m",
+      "label": "Mobile image",
+      "info": "Optional"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "Header",
+      "content": "Bottom text"
+    },
+    {
+      "type": "text",
+      "id": "bottom_text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "bottom_text_m",
+      "label": "Mobile text",
+      "info": "Optional"
+    }
   ],
   "presets": [
     {
