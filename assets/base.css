@@ -3657,6 +3657,7 @@ details-disclosure > details {
   padding-inline: 50px;
 }
 .btn{
+  font-family: 'Jost';
   display: inline-flex;
   justify-content: center;
   font-size: 16px;
