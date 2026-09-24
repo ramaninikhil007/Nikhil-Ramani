@@ -192,6 +192,10 @@ body.qv-lock-scroll{
    appearance: none;
    outline: none;
 }
+.qv-size-select option {
+  text-align: center;
+  text-align-last: center;
+}
 .qv-select-chevron{
     width: 55px;
     height: 100%;
