@@ -1,4 +1,5 @@
 {{ 'n-products.css' | asset_url | stylesheet_tag }}
+{{ 'n-products-quick-view.css' | asset_url | stylesheet_tag }}
 
 <div class="container">
     {%- if section.settings.title != blank -%}
@@ -9,26 +10,28 @@
     <div class="product-list">
       <div class="grid grid--2-col grid--3-col-desktop">
         {%- for block in section.blocks -%}
-        {%- liquid
-          assign product = block.settings.product
-        -%}
-        <div class="grid__item">
-          <div class="product_item">
-            <div class="product_image">
-              {{
-                product.featured_media
-                | image_url: width: 3840
-                | image_tag: height: height, sizes: '100vw', widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
-              }}
-            </div>
-            <div class="product_quickview" style="top:{{ block.settings.icon_top }}%;left:{{ block.settings.icon_left }}%;">
-              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4.98047 0.75V9.21154" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
-                <path d="M0.75 4.98071H9.21154" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
-              </svg>
+          {%- liquid
+            assign product = block.settings.product
+          -%}
+          {% if product %}
+          <div class="grid__item" data-product-handle="{{ product.handle }}">
+            <div class="product_item">
+              <div class="product_image">
+                {{
+                  product.featured_media
+                  | image_url: width: 3840
+                  | image_tag: height: height, sizes: '100vw', widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                }}
+              </div>
+              <button type="button" class="product_quickview" data-product-handle="{{ product.handle }}" style="top:{{ block.settings.icon_top }}%;left:{{ block.settings.icon_left }}%;" aria-label="Quick view {{ product.handle | escape }}">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.98047 0.75V9.21154" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+                  <path d="M0.75 4.98071H9.21154" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"/>
+                </svg>
+              </button>
             </div>
           </div>
-        </div>
+          {% endif %}
         {%- endfor -%}
       </div>
     </div>
