@@ -3658,6 +3658,7 @@ details-disclosure > details {
 }
 .btn{
   display: inline-flex;
+  justify-content: center;
   font-size: 16px;
   font-weight: 400;
   padding: 14px 55px;
