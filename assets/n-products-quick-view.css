@@ -231,6 +231,15 @@ body.qv-lock-scroll{
 .qv-atc.is-disabled{
     cursor: not-allowed;
 }
+.qv-error, .qv-loading{
+    font-size: 14px;
+    color: #000;
+    font-weight: 300;
+    letter-spacing: -.14px;
+    line-height: 1.1;
+    margin: 0;
+    text-align: center;
+}
 @media screen and (max-width:749px){
     .qv-desc{
         font-size: 12px;
