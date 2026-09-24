@@ -160,7 +160,7 @@
     var html = '<div class="qv-field"><label>' + escapeHtml(state.colorOption.name) + '</label><div class="qv-swatches">';
     state.colorOption.values.forEach(function (val) {
       var active = val === state.selectedColor ? ' is-active' : '';
-      html += '<button type="button" class="qv-swatch' + active + '" data-value="' + escapeAttr(val) + '">' + escapeHtml(val) + '</button>';
+      html += '<button type="button" class="qv-swatch' + active + '" data-value="' + escapeAttr(val) + '" style="--swatch-color: ' + escapeAttr(val) + ';">' + escapeHtml(val) + '</button>';
     });
     html += '</div></div>';
     return html;

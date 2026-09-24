@@ -63,6 +63,7 @@ body.qv-lock-scroll{
     border-radius: 0px;
     border: none;
     transform: rotate(90deg);
+    cursor: pointer;
 }
 .qv-body{
     display: flex;
@@ -137,4 +138,28 @@ body.qv-lock-scroll{
 }
 .qv-swatch{
     width: 50%;
+    font-size: 18px;
+    color: #000;
+    font-weight: 400;
+    letter-spacing: -0.36px;
+    line-height: 1.1;
+    padding: 5px 5px 5px 15px;
+    border: 1px solid #000;
+    border-radius: 0px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    position: relative;
+}
+.qv-swatch:before{
+    content: '';
+    background: var(--swatch-color);
+    width: 5px;
+    border: 1px solid #000;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    bottom: -1px;
+    z-index: 1;
 }
