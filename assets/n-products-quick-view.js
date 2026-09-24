@@ -136,7 +136,7 @@
       '<div class="qv-btm-info">' +
         (state.colorOption ? renderColorBlock() : '') +
         (state.sizeOption ? renderSizeBlock() : '') +
-        '<button type="button" class="qv-atc btn btn-black btn-with-arrow" type="button"></button>' +
+        '<button type="button" class="qv-atc btn btn-black btn-with-arrow" type="button"><span></span></button>' +
       '</div>';
 
     if (state.colorOption) bindColorSwatches();
@@ -213,18 +213,18 @@
     atc.classList.remove('is-disabled');
 
     if (state.sizeOption && !state.selectedSize) {
-      atc.innerHTML = 'Choose your size';
+      atc.innerHTML = '<span>Choose your size</span>';
       atc.disabled = true;
       atc.classList.add('is-disabled');
       return;
     }
     if (!v || !v.available) {
-      atc.innerHTML = 'Sold out';
+      atc.innerHTML = '<span>Sold out</span>';
       atc.disabled = true;
       atc.classList.add('is-disabled');
       return;
     }
-    atc.innerHTML = 'Add to cart';
+    atc.innerHTML = '<span>Add to cart</span>';
   }
 
   function bindAddToCart() {
