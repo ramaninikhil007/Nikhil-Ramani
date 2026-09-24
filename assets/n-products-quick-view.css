@@ -191,6 +191,8 @@ body.qv-lock-scroll{
    -moz-appearance: none;
    appearance: none;
    outline: none;
+    text-align: left;
+    text-align-last: left;
 }
 .qv-size-select option {
   text-align: center;
