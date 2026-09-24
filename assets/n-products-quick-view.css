@@ -21,3 +21,38 @@
         height: 7px;
     }
 }
+
+.qv-overlay{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    padding: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.qv-overlay.is-open{
+    display: flex;
+}
+body.qv-lock-scroll{
+    overflow: hidden;
+}
+.qv-modal{
+    width: 100%;
+    max-width: 311px;
+    background: #fff;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 36px 20px 25px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.qv-close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 0;
+    border-radius: 0px;
+    border: none;
+}

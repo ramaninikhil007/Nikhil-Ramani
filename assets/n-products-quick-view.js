@@ -22,7 +22,7 @@
     modal.className = 'qv-overlay';
     modal.innerHTML =
       '<div class="qv-modal" role="dialog" aria-modal="true">' +
-        '<button type="button" class="qv-close" aria-label="Close">&times;</button>' +
+        '<button type="button" class="qv-close" aria-label="Close"></button>' +
         '<div class="qv-body"><div class="qv-loading">Loading…</div></div>' +
       '</div>';
     document.body.appendChild(modal);
