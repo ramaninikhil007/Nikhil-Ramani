@@ -160,11 +160,11 @@ body.qv-lock-scroll{
     content: '';
     background: var(--swatch-color);
     width: 5px;
-    border: 1px solid #000;
+    border-inline-end: 1px solid #000;
     position: absolute;
     left: -1px;
-    top: -1px;
-    bottom: -1px;
+    top: 0px;
+    bottom: 0px;
     z-index: 1;
 }
 .qv-swatch.is-active{
@@ -220,4 +220,5 @@ body.qv-lock-scroll{
 .qv-atc{
     width: 100%;
     margin-block-start: 50px;
+    cursor: pointer;
 }
