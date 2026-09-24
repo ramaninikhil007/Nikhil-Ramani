@@ -11,6 +11,12 @@
     position: absolute;
     cursor: pointer;
 }
+.product_quickview svg{
+    transition: all 0.5s ease;
+}
+.product_quickview.is-open svg{
+    transform: rotate(315deg);
+}
 @media screen and (max-width:749px){
     .product_quickview{
         width: 15px;
