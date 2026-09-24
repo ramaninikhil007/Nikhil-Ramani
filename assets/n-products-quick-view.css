@@ -222,6 +222,9 @@ body.qv-lock-scroll{
     margin-block-start: 50px;
     cursor: pointer;
 }
+.qv-atc.is-disabled{
+    cursor: not-allowed;
+}
 @media screen and (max-width:749px){
     .qv-desc{
         font-size: 12px;
