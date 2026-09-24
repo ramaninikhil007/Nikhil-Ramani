@@ -13,7 +13,7 @@
           {%- liquid
             assign product = block.settings.product
           -%}
-          {% if product %}
+          {% if block.settings.product != blank %}
           <div class="grid__item" data-product-handle="{{ product.handle }}">
             <div class="product_item">
               <div class="product_image">
