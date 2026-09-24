@@ -34,10 +34,55 @@
             "icon_top": 50,
             "icon_left": 50
           }
+        },
+        "product_p9iW8m": {
+          "type": "product",
+          "settings": {
+            "product": "blue-silk-tuxedo",
+            "icon_top": 50,
+            "icon_left": 50
+          }
+        },
+        "product_n6iQNJ": {
+          "type": "product",
+          "settings": {
+            "product": "chequered-red-shirt",
+            "icon_top": 50,
+            "icon_left": 50
+          }
+        },
+        "product_pkVrrw": {
+          "type": "product",
+          "settings": {
+            "product": "classic-leather-jacket",
+            "icon_top": 50,
+            "icon_left": 50
+          }
+        },
+        "product_zE7rn7": {
+          "type": "product",
+          "settings": {
+            "product": "classic-varsity-top",
+            "icon_top": 50,
+            "icon_left": 50
+          }
+        },
+        "product_QjFgqd": {
+          "type": "product",
+          "settings": {
+            "product": "dark-denim-top",
+            "icon_top": 50,
+            "icon_left": 50
+          }
         }
       },
       "block_order": [
-        "product_6teCfg"
+        "product_6teCfg",
+        "product_p9iW8m",
+        "product_n6iQNJ",
+        "product_pkVrrw",
+        "product_zE7rn7",
+        "product_QjFgqd"
       ],
       "name": "N products",
       "settings": {
