@@ -138,19 +138,23 @@ body.qv-lock-scroll{
 }
 .qv-swatch{
     width: 50%;
+    font-family: 'Jost';
     font-size: 18px;
     color: #000;
     font-weight: 400;
     letter-spacing: -0.36px;
     line-height: 1.1;
     padding: 5px 5px 5px 15px;
-    border: 1px solid #000;
+    border: none;
+    box-shadow: 0px 0px 0px 1px #000;
     border-radius: 0px;
     background: transparent;
     display: flex;
     align-items: center;
     height: 40px;
     position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease;
 }
 .qv-swatch:before{
     content: '';
@@ -162,4 +166,53 @@ body.qv-lock-scroll{
     top: -1px;
     bottom: -1px;
     z-index: 1;
+}
+.qv-swatch.is-active{
+    background: #000;
+    color: #fff;
+}
+.qv-select-wrap{
+    width: 100%;
+    position: relative;
+}
+.qv-size-select{
+    width: 100%;
+    height: 40px;
+    font-family: 'Jost';
+    font-size: 16px;
+    color: #000;
+    font-weight: 400;
+    letter-spacing: -0.32px;
+    line-height: 1.1;
+    padding: 5px 55px 5px 13px;
+    border: none;
+    box-shadow: 0px 0px 0px 1px #000;
+    -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   outline: none;
+}
+.qv-select-chevron{
+    width: 55px;
+    height: 100%;
+    border-inline-start: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.qv-select-chevron:before{
+    content: '';
+    width: 15px;
+    height: 9px;
+    background-image: url('data:image/svg+xml,%3Csvg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M1.06067 1.06067L7.06067 7.06067L13.0607 1.06067" stroke="black" stroke-width="1.5" stroke-linecap="square"/%3E%3C/svg%3E');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.5s ease;
+}
+.qv-size-select:focus-visible+.qv-select-chevron{
+    transform: rotate(180deg);
 }

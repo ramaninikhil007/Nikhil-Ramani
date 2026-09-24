@@ -136,7 +136,7 @@
       '<div class="qv-btm-info">' +
         (state.colorOption ? renderColorBlock() : '') +
         (state.sizeOption ? renderSizeBlock() : '') +
-        '<button type="button" class="qv-atc" type="button"></button>' +
+        '<button type="button" class="qv-atc btn btn-black btn-with-arrow" type="button"></button>' +
       '</div>';
 
     if (state.colorOption) bindColorSwatches();
@@ -176,7 +176,7 @@
       var disabled = available ? '' : ' disabled';
       html += '<option value="' + escapeAttr(val) + '"' + selected + disabled + '>' + escapeHtml(val) + (available ? '' : ' - Sold out') + '</option>';
     });
-    html += '</select><span class="qv-select-chevron">&#9662;</span></div></div>';
+    html += '</select><span class="qv-select-chevron"></span></div></div>';
     return html;
   }
 
@@ -224,7 +224,7 @@
       atc.classList.add('is-disabled');
       return;
     }
-    atc.innerHTML = 'Add to cart <span class="qv-atc-arrow">&#8594;</span>';
+    atc.innerHTML = 'Add to cart';
   }
 
   function bindAddToCart() {
