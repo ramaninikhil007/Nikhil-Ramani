@@ -232,6 +232,7 @@ body.qv-lock-scroll{
     cursor: not-allowed;
 }
 .qv-error, .qv-loading{
+    width:100%;
     font-size: 14px;
     color: #000;
     font-weight: 300;
