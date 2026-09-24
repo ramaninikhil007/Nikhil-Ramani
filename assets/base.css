@@ -3718,6 +3718,14 @@ details-disclosure > details {
 .btn-black:after{
   background: #FFF544;
 }
+.n-title{
+  font-family: 'Lustria';
+  font-size: 36px;
+  color: #000000;
+  letter-spacing: normal;
+  line-height: 1.2;   
+  margin-block: 0 30px;
+}
 @media screen and (max-width:989px){
   .container{
     padding-inline: 16px;

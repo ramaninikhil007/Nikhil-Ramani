@@ -1,0 +1,13 @@
+.product_quickview{
+    width: 22px;
+    height: 22px;
+    background: #F8F8F8E5;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+}

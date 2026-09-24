@@ -1,0 +1,17 @@
+.n-products{
+    margin-block: 90px 50px;
+}
+.product_item{
+    position: relative;
+}
+.product_image{
+    position: relative;
+    padding-block-start: 110%;
+}
+.product_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    inset: 0;
+}
