@@ -11,3 +11,13 @@
     position: absolute;
     cursor: pointer;
 }
+@media screen and (max-width:749px){
+    .product_quickview{
+        width: 15px;
+        height: 15px;
+    }
+    .product_quickview svg{
+        width: 7px;
+        height: 7px;
+    }
+}

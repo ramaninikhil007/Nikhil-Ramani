@@ -15,3 +15,14 @@
     position: absolute;
     inset: 0;
 }
+@media screen and (max-width:989px){
+    .n-products{
+        margin-block: 40px 25px;
+    }
+}
+@media screen and (max-width:749px){
+    .product-list .grid{
+       --grid-mobile-horizontal-spacing:4px;
+       --grid-mobile-vertical-spacing:4px;
+    }
+}
