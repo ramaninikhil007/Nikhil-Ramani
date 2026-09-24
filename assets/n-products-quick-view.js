@@ -63,6 +63,7 @@
     if (!modal) return;
     modal.classList.remove('is-open');
     document.body.classList.remove('qv-lock-scroll');
+    trigger.classList.remove('is-open');
   }
 
   function buildState(product) {
