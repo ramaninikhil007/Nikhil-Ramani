@@ -40,30 +40,30 @@
           "settings": {
             "product": "blue-silk-tuxedo",
             "icon_top": 50,
-            "icon_left": 50
+            "icon_left": 83
           }
         },
         "product_n6iQNJ": {
           "type": "product",
           "settings": {
             "product": "chequered-red-shirt",
-            "icon_top": 50,
-            "icon_left": 50
+            "icon_top": 20,
+            "icon_left": 60
           }
         },
         "product_pkVrrw": {
           "type": "product",
           "settings": {
             "product": "classic-leather-jacket",
-            "icon_top": 50,
-            "icon_left": 50
+            "icon_top": 17,
+            "icon_left": 71
           }
         },
         "product_zE7rn7": {
           "type": "product",
           "settings": {
             "product": "classic-varsity-top",
-            "icon_top": 50,
+            "icon_top": 24,
             "icon_left": 50
           }
         },
@@ -71,8 +71,8 @@
           "type": "product",
           "settings": {
             "product": "dark-denim-top",
-            "icon_top": 50,
-            "icon_left": 50
+            "icon_top": 37,
+            "icon_left": 76
           }
         }
       },
