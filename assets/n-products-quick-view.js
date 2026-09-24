@@ -9,6 +9,7 @@
       var trigger = e.target.closest('.product_quickview');
       if (trigger) {
         e.preventDefault();
+        trigger.classList.add('is-open');
         var handle = trigger.dataset.productHandle;
         if (handle) openQuickView(handle);
       }
