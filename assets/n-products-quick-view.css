@@ -202,6 +202,7 @@ body.qv-lock-scroll{
     position: absolute;
     top: 0;
     right: 0;
+    pointer-events: none;
 }
 .qv-select-chevron:before{
     content: '';
@@ -213,6 +214,10 @@ body.qv-lock-scroll{
     background-size: contain;
     transition: all 0.5s ease;
 }
-.qv-size-select:focus-visible+.qv-select-chevron{
+/* .qv-size-select:focus-visible+.qv-select-chevron:before{
     transform: rotate(180deg);
+} */
+.qv-atc{
+    width: 100%;
+    margin-block-start: 50px;
 }
